@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lorong Creative Publishing | Menebar Faidah Melalui Tulisan</title>
+<meta name="description" content="Lorong Creative Publishing adalah penerbit buku Islam di bawah Yayasan Lorong Faradisa, penerbit resmi karya Dr. Syafiq Riza Basalamah, M.A.">
+<meta name="theme-color" content="#151C4A">
+<meta property="og:title" content="Lorong Creative Publishing">
+<meta property="og:description" content="Menebar Faidah Melalui Tulisan. Buku Islam yang autentik, berkualitas, dan nyaman dibaca.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 46'%3E%3Cpath d='M2,44 L2,30 A36,36 0 0 1 20,12.8 A36,36 0 0 1 38,30 L38,44 Z' fill='%23151C4A'/%3E%3Cpath d='M10,44 L10,36 A20,20 0 0 1 20,26.7 A20,20 0 0 1 30,36 L30,44 Z' fill='%23F2B835'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#161C45;
+  --muted:#4A5280;
+  --nila:#151C4A;
+  --nila-2:#243180;
+  --kertas:#EEF0F7;
+  --kabut:#D5DAEE;
+  --cahaya:#F2B835;
+  --teal:#1D5C63;
+  --putih:#FBFCFE;
+  --on-dark:#EEF0F7;
+  --on-dark-muted:#B9C1E6;
+  --serif:"Alegreya",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --wrap:1120px;
+  --pad:clamp(20px,4vw,40px);
+  --logo-inner:var(--cahaya);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--kertas);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;letter-spacing:-.005em}
+p{margin:0}
+[lang=ar]{font-size:1.25em;line-height:1}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+:focus-visible{outline:3px solid var(--cahaya);outline-offset:3px;border-radius:4px}
+.on-light :focus-visible,.light :focus-visible{outline-color:var(--nila-2)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--cahaya);color:var(--ink);padding:10px 16px;border-radius:999px;font-weight:600;z-index:50}
+.skip:focus{left:12px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font:600 .975rem/1 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s}
+.btn[hidden]{display:none}
+.btn-gold{background:var(--cahaya);color:var(--ink)}
+.btn-gold:hover{background:#F7C95A}
+.btn-line{border-color:rgba(238,240,247,.5);color:var(--on-dark)}
+.btn-line:hover{border-color:var(--on-dark);background:rgba(238,240,247,.08)}
+.btn-ink{background:var(--nila);color:var(--on-dark)}
+.btn-ink:hover{background:var(--nila-2)}
+.btn-ghost{border-color:var(--nila);color:var(--nila)}
+.btn-ghost:hover{background:var(--nila);color:var(--on-dark)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--nila);color:var(--on-dark);position:relative;overflow:hidden}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:26px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--on-dark)}
+.brand .name{font:800 1.5rem/1 var(--serif)}
+.brand .sub{display:block;font:500 .78rem/1.2 var(--sans);color:var(--on-dark-muted);margin-top:3px}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--on-dark-muted)}
+.nav a:hover{color:var(--on-dark)}
+.nav .btn{min-height:42px;padding:0 20px;font-size:.9rem;color:var(--ink)}
+.nav .btn:hover{color:var(--ink)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,5vw,72px);align-items:end;padding-top:clamp(28px,6vw,72px)}
+.hero h1{font-weight:800;font-size:clamp(2.7rem,5.5vw,4.9rem);line-height:1.02;letter-spacing:-.015em;color:var(--on-dark)}
+.hero h1 span{display:block}
+.hero .lead{margin-top:28px;max-width:34em;font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--on-dark-muted)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero .proof{margin-top:44px;padding-top:22px;border-top:1px solid rgba(185,193,230,.28);max-width:34em;font-size:.95rem;color:var(--on-dark-muted);padding-bottom:clamp(40px,6vw,72px)}
+.hero .proof strong{color:var(--on-dark);font-weight:600}
+.corridor{position:relative;width:100%;max-width:440px;margin-inline:auto}
+.corridor svg{width:100%;height:auto;overflow:visible}
+.corridor .glow{position:absolute;left:50%;top:52%;width:70%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(242,184,53,.55) 0%,rgba(242,184,53,.16) 38%,rgba(242,184,53,0) 68%);pointer-events:none}
+.a{transform-box:fill-box;transform-origin:50% 100%}
+.a0{fill:#232F7F}.a1{fill:#303FA0}.a2{fill:#3C4DAB}.a3{fill:#5567C2}.a4{fill:#7D8BD6}.a5{fill:#B4BEEC}.a6{fill:var(--cahaya)}
+.ground{fill:#0F1538}
+@media (prefers-reduced-motion:no-preference){
+  .a{animation:masuk .95s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 150ms + 150ms)}
+  .corridor .glow{animation:terang 1.6s ease-out 1.2s both}
+  @keyframes masuk{from{opacity:0;transform:scaleY(.55)}to{opacity:1;transform:scaleY(1)}}
+  @keyframes terang{from{opacity:0}to{opacity:1}}
+}
+
+/* ---------- generic sections ---------- */
+section{padding-block:clamp(64px,10vw,120px)}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.08;font-weight:800}
+.section-lead{margin-top:18px;max-width:38em;color:var(--muted);font-size:1.075rem}
+
+/* ---------- tentang ---------- */
+.tentang .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:start}
+.tentang .body p+p{margin-top:1.1em}
+.tentang .body{color:var(--muted)}
+.tentang .body strong{color:var(--ink);font-weight:600}
+.janji{margin-top:clamp(40px,6vw,72px);padding-top:clamp(28px,4vw,44px);border-top:2px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:baseline}
+.janji p.big{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.2;color:var(--nila-2)}
+.janji p.note{color:var(--muted);font-size:.975rem}
+
+/* ---------- buku ---------- */
+.buku{background:var(--putih)}
+.shelf{margin-top:clamp(36px,5vw,56px);overflow-x:auto;padding:20px 4px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shelf-row{display:flex;gap:clamp(14px,2.4vw,28px);align-items:flex-end;min-width:max-content;border-bottom:6px solid var(--ink);padding-bottom:0}
+.cover{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;align-items:stretch;width:clamp(138px,13vw,182px);scroll-snap-align:start;transition:transform .22s cubic-bezier(.2,.7,.2,1)}
+.cover:focus-visible{outline:3px solid var(--nila-2);outline-offset:4px}
+.cover:hover{transform:translateY(-6px)}
+.cover[aria-pressed="true"]{transform:translateY(-16px)}
+.face{display:flex;flex-direction:column;justify-content:space-between;padding:16px 14px 12px;border-radius:3px 8px 8px 3px;box-shadow:inset 6px 0 0 rgba(0,0,0,.14),0 1px 0 rgba(21,28,74,.25);width:100%}
+.ct{font:800 clamp(1.02rem,1.55vw,1.28rem)/1.08 var(--serif)}
+.face svg{width:78%;margin:12px auto 10px}
+.cp{font:600 .66rem/1 var(--sans);letter-spacing:.02em;opacity:.85}
+.when{padding:12px 2px 14px;font:600 .82rem/1.2 var(--sans);color:var(--muted);border-top:0;text-align:left;position:relative}
+.cover[aria-pressed="true"] .when{color:var(--ink)}
+.cover[aria-pressed="true"] .when::after{content:"";position:absolute;left:2px;bottom:6px;width:28px;height:4px;border-radius:2px;background:var(--cahaya)}
+.c-nak .face{background:var(--nila);color:var(--on-dark)}
+.c-msisk .face{background:var(--cahaya);color:var(--ink)}
+.c-atmd .face{background:var(--ink);color:var(--kabut)}
+.c-amd .face{background:var(--kabut);color:var(--nila-2)}
+.c-ddt .face{background:var(--teal);color:var(--kertas)}
+.detail{margin-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,72px);align-items:start;transition:opacity .16s}
+.detail.ganti{opacity:0}
+.detail h3{font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.1;font-weight:800}
+.detail .for{margin-top:10px;font-weight:600;color:var(--nila-2)}
+.detail .blurb{margin-top:18px;color:var(--muted);max-width:36em}
+.detail .penulis{margin-top:14px;font-size:.95rem;color:var(--muted)}
+.specs{margin:0;display:grid;grid-template-columns:auto 1fr;gap:0;font-size:.975rem}
+.specs dt,.specs dd{padding:12px 0;border-bottom:1px solid var(--kabut);margin:0}
+.specs dt{color:var(--muted);padding-right:28px}
+.specs dd{font-weight:600;text-align:right}
+.detail .buy{margin-top:24px}
+
+/* ---------- proses ---------- */
+.proses .grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,88px);align-items:start}
+.steps{list-style:none;margin:0;padding:0;position:relative}
+.steps li{position:relative;padding:0 0 34px 56px}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:"";position:absolute;left:15px;top:30px;bottom:-4px;width:2px;background:var(--kabut)}
+.steps li:last-child::before{display:none}
+.steps .mk{position:absolute;left:0;top:2px;width:32px;height:32px}
+.steps h3{font-size:1.4rem;font-weight:700;line-height:1.2}
+.steps p{margin-top:6px;color:var(--muted);max-width:32em}
+
+/* ---------- prinsip ---------- */
+.prinsip{background:var(--nila);color:var(--on-dark)}
+.prinsip h2{max-width:14em}
+.prinsip .section-lead{color:var(--on-dark-muted)}
+.five{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.five>div{padding:6px 22px 6px 22px;border-left:1px solid rgba(185,193,230,.3)}
+.five>div:first-child{padding-left:0;border-left:0}
+.five h3{font-size:1.35rem;line-height:1.2;color:var(--cahaya)}
+.five p{margin-top:10px;font-size:.95rem;color:var(--on-dark-muted);line-height:1.55}
+
+/* ---------- kemitraan ---------- */
+.three{margin-top:clamp(36px,5vw,60px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,28px);align-items:stretch}
+.card{background:var(--putih);border:2px solid var(--ink);border-radius:160px 160px 14px 14px;padding:clamp(72px,9vw,96px) clamp(22px,2.4vw,32px) 30px;display:flex;flex-direction:column}
+.card h3{font-size:1.6rem;line-height:1.15;font-weight:800}
+.card p{margin-top:12px;color:var(--muted);flex:1}
+.card .btn{margin-top:26px;align-self:flex-start}
+
+/* ---------- yayasan ---------- */
+.yayasan{background:var(--kabut)}
+.yayasan .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:start}
+.yayasan .body{color:#323A6B}
+.yayasan .body p+p{margin-top:1.1em}
+.nilai{margin-top:clamp(40px,6vw,64px);padding-top:clamp(24px,3vw,36px);border-top:2px solid var(--ink)}
+.nilai h3{font-size:1.15rem;font-family:var(--sans);font-weight:700}
+.nilai ul{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;font:700 clamp(1.5rem,3.4vw,2.6rem)/1.25 var(--serif);color:var(--nila-2)}
+.nilai li{padding-right:.55em;margin-right:.55em;border-right:2px solid rgba(36,49,128,.35)}
+.nilai li:last-child{border-right:0;margin-right:0;padding-right:0}
+
+/* ---------- kontak / footer ---------- */
+.kontak{background:var(--nila);color:var(--on-dark);padding-top:clamp(64px,10vw,120px);padding-bottom:36px}
+.kontak h2{font-size:clamp(2.2rem,5.4vw,4.2rem);max-width:12em;line-height:1.04}
+.kontak .section-lead{color:var(--on-dark-muted)}
+.kontak .links{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.legal{margin-top:clamp(56px,8vw,96px);padding-top:24px;border-top:1px solid rgba(185,193,230,.28);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:.88rem;color:var(--on-dark-muted)}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .five{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}
+  .five>div:nth-child(odd){padding-left:0;border-left:0}
+  .five>div:last-child{grid-column:1/-1;padding-left:0;border-left:0}
+  .three{grid-template-columns:1fr;max-width:460px}
+}
+@media (max-width:820px){
+  .hero-grid,.tentang .grid,.janji,.detail,.proses .grid,.yayasan .grid{grid-template-columns:1fr}
+  .hero-grid{align-items:start}
+  .corridor{max-width:340px;margin-top:8px}
+  .nav a:not(.btn){display:none}
+  .hero .proof{padding-bottom:36px}
+}
+@media (max-width:520px){
+  .five{grid-template-columns:1fr}
+  .five>div,.five>div:nth-child(odd),.five>div:last-child{padding-left:0;border-left:0;padding-top:18px;border-top:1px solid rgba(185,193,230,.3)}
+  .five>div:first-child{border-top:0;padding-top:0}
+  .brand .sub{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#isi">Langsung ke isi halaman</a>
+
+<header class="hero" id="atas">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="#atas" aria-label="Lorong Creative Publishing, kembali ke atas">
+        <svg viewBox="0 0 40 46" width="26" height="30" aria-hidden="true" focusable="false"><path d="M2.0,44.0 L2.0,30.0 A36.0,36.0 0 0 1 20.0,-1.2 A36.0,36.0 0 0 1 38.0,30.0 L38.0,44.0 Z" fill="currentColor"/><path d="M10.0,44.0 L10.0,36.0 A20.0,20.0 0 0 1 20.0,18.7 A20.0,20.0 0 0 1 30.0,36.0 L30.0,44.0 Z" fill="var(--logo-inner)"/></svg>
+        <span><span class="name">Lorong</span><span class="sub">Creative Publishing</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#buku">Buku</a>
+        <a href="#proses">Proses</a>
+        <a href="#kemitraan">Kemitraan</a>
+        <a class="btn btn-gold" href="#kontak">Hubungi kami</a>
+      </nav>
+    </div>
+
+    <div class="hero-grid" id="isi">
+      <div>
+        <h1><span>Menebar Faidah</span><span>Melalui Tulisan.</span></h1>
+        <p class="lead">Kami menerbitkan buku-buku Islam yang autentik, berkualitas, dan nyaman dibaca, berlandaskan Al-Qur’an dan As-Sunnah.</p>
+        <div class="cta">
+          <a class="btn btn-gold" href="#buku">Lihat buku kami</a>
+          <a class="btn btn-line" href="#kemitraan">Bermitra dengan kami</a>
+        </div>
+        <p class="proof"><strong>Penerbit resmi karya Dr. Syafiq Riza Basalamah, M.A.</strong><br>Bagian dari Yayasan Lorong Faradisa.</p>
+      </div>
+
+      <div class="corridor" role="img" aria-label="Deretan lengkung yang menyempit ke arah cahaya di ujung lorong">
+        <div class="glow"></div>
+        <svg viewBox="0 120 400 440" aria-hidden="true" focusable="false">
+          <rect class="ground" x="-60" y="540" width="520" height="40"/>
+          <path class="a a0" style="--i:0" d="M50.0,540.0 L50.0,405.0 A300.0,300.0 0 0 1 200.0,145.2 A300.0,300.0 0 0 1 350.0,405.0 L350.0,540.0 Z"/>
+      <path class="a a1" style="--i:1" d="M95.0,483.0 L95.0,388.5 A210.0,210.0 0 0 1 200.0,206.6 A210.0,210.0 0 0 1 305.0,388.5 L305.0,483.0 Z"/>
+      <path class="a a2" style="--i:2" d="M126.5,443.1 L126.5,377.0 A147.0,147.0 0 0 1 200.0,249.6 A147.0,147.0 0 0 1 273.5,377.0 L273.5,443.1 Z"/>
+      <path class="a a3" style="--i:3" d="M148.6,415.2 L148.6,368.9 A102.9,102.9 0 0 1 200.0,279.8 A102.9,102.9 0 0 1 251.4,368.9 L251.4,415.2 Z"/>
+      <path class="a a4" style="--i:4" d="M164.0,395.6 L164.0,363.2 A72.0,72.0 0 0 1 200.0,300.8 A72.0,72.0 0 0 1 236.0,363.2 L236.0,395.6 Z"/>
+      <path class="a a5" style="--i:5" d="M174.8,381.9 L174.8,359.2 A50.4,50.4 0 0 1 200.0,315.6 A50.4,50.4 0 0 1 225.2,359.2 L225.2,381.9 Z"/>
+      <path class="a a6" style="--i:6" d="M182.4,372.4 L182.4,356.5 A35.3,35.3 0 0 1 200.0,325.9 A35.3,35.3 0 0 1 217.6,356.5 L217.6,372.4 Z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="tentang" id="tentang">
+  <div class="wrap">
+    <div class="grid">
+      <h2>Penerbit yang menjaga amanah sebuah tulisan.</h2>
+      <div class="body">
+        <p>Lorong Creative Publishing adalah penerbit di bawah Yayasan Lorong Faradisa yang saat ini menjadi <strong>penerbit resmi karya Dr. Syafiq Riza Basalamah, M.A.</strong> Kami menerbitkan dan menjual buku-buku Islam bertema keluarga, pernikahan, parenting, dan motivasi Islami.</p>
+        <p>Kami ingin dipercaya bukan hanya karena nama penulisnya, tetapi karena reputasi kami sebagai penerbit yang amanah, autentik, berkualitas, dan konsisten menghadirkan karya berlandaskan Al-Qur’an dan As-Sunnah. Dari sini kami berharap bisa memiliki lebih banyak penulis dan judul, serta menjangkau lebih banyak pembaca.</p>
+      </div>
+    </div>
+    <div class="janji">
+      <p class="big">Membersamaimu mengarungi bahtera rumah tangga.</p>
+      <p class="note">Itulah janji kami untuk lini buku keluarga. Lima judul sudah terbit sejak November 2024, menemani suami, istri, orang tua, dan siapa pun yang sedang belajar memperbaiki diri.</p>
+    </div>
+  </div>
+</section>
+
+<section class="buku" id="buku">
+  <div class="wrap">
+    <h2>Buku-buku kami</h2>
+    <p class="section-lead">Disusun dari yang paling awal terbit. Pilih satu judul untuk melihat ringkasannya.</p>
+
+    <div class="shelf" role="group" aria-label="Rak buku Locre Publishing">
+      <div class="shelf-row">
+        <button class="cover c-atmd" type="button" data-id="atmd" aria-pressed="false" aria-label="Andai Tidak Menikah Dengannya, terbit November 2024">
+          <span class="face" style="aspect-ratio:13/20">
+            <span class="ct">Andai Tidak Menikah Dengannya</span>
+            <svg viewBox="0 0 100 80" aria-hidden="true"><path d="M17.0,72.0 L17.0,52.0 A30.0,30.0 0 0 1 32.0,26.0 A30.0,30.0 0 0 1 47.0,52.0 L47.0,72.0 Z" fill="var(--kabut)"/><path d="M53.0,72.0 L53.0,52.0 A30.0,30.0 0 0 1 68.0,26.0 A30.0,30.0 0 0 1 83.0,52.0 L83.0,72.0 Z" fill="none" stroke="var(--kabut)" stroke-width="2.6" stroke-linejoin="round"/></svg>
+            <span class="cp">Locre Publishing</span>
+          </span>
+          <span class="when">November 2024</span>
+        </button>
+        <button class="cover c-msisk" type="button" data-id="msisk" aria-pressed="false" aria-label="Memandang Setengah Isi Setengah Kosong, terbit Juni 2025">
+          <span class="face" style="aspect-ratio:13/20">
+            <span class="ct">Memandang Setengah Isi Setengah Kosong</span>
+            <svg viewBox="0 0 100 80" aria-hidden="true"><circle cx="50" cy="40" r="28" fill="none" stroke="var(--ink)" stroke-width="2.6"/><path d="M50 12 A28 28 0 0 0 50 68 Z" fill="var(--ink)"/></svg>
+            <span class="cp">Locre Publishing</span>
+          </span>
+          <span class="when">Juni 2025</span>
+        </button>
+        <button class="cover c-amd" type="button" data-id="amd" aria-pressed="false" aria-label="Andai Menikah Dengannya, terbit Februari 2026">
+          <span class="face" style="aspect-ratio:13/20">
+            <span class="ct">Andai Menikah Dengannya</span>
+            <svg viewBox="0 0 100 80" aria-hidden="true"><path d="M17.0,72.0 L17.0,52.0 A30.0,30.0 0 0 1 32.0,26.0 A30.0,30.0 0 0 1 47.0,52.0 L47.0,72.0 Z" fill="none" stroke="var(--nila-2)" stroke-width="2.6" stroke-linejoin="round"/><path d="M53.0,72.0 L53.0,52.0 A30.0,30.0 0 0 1 68.0,26.0 A30.0,30.0 0 0 1 83.0,52.0 L83.0,72.0 Z" fill="var(--nila-2)"/></svg>
+            <span class="cp">Locre Publishing</span>
+          </span>
+          <span class="when">Februari 2026</span>
+        </button>
+        <button class="cover c-ddt" type="button" data-id="ddt" aria-pressed="false" aria-label="Doa-Doa Terindah, terbit April 2026">
+          <span class="face" style="aspect-ratio:10/17">
+            <span class="ct">Doa-Doa Terindah</span>
+            <svg viewBox="0 0 100 80" aria-hidden="true"><path d="M29.0,74.0 L29.0,56.0 A42.0,42.0 0 0 1 50.0,19.6 A42.0,42.0 0 0 1 71.0,56.0 L71.0,74.0 Z" fill="none" stroke="var(--kertas)" stroke-width="2.6" stroke-linejoin="round"/><g fill="var(--cahaya)"><circle cx="40" cy="52" r="2.8"/><circle cx="50" cy="52" r="2.8"/><circle cx="60" cy="52" r="2.8"/></g></svg>
+            <span class="cp">Locre Publishing</span>
+          </span>
+          <span class="when">April 2026</span>
+        </button>
+        <button class="cover c-nak" type="button" data-id="nak" aria-pressed="true" aria-label="Nakhoda Anak Kita, terbit September 2026">
+          <span class="face" style="aspect-ratio:13/20">
+            <span class="ct">Nakhoda Anak Kita</span>
+            <svg viewBox="0 0 100 80" aria-hidden="true"><g fill="none" stroke="var(--cahaya)" stroke-width="2.6" stroke-linejoin="round"><rect x="30" y="20" width="40" height="40"/><rect x="30" y="20" width="40" height="40" transform="rotate(45 50 40)"/></g><circle cx="50" cy="40" r="4.5" fill="var(--cahaya)"/></svg>
+            <span class="cp">Locre Publishing</span>
+          </span>
+          <span class="when">September 2026</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="detail" id="detail" aria-live="polite">
+      <div>
+        <h3 id="d-title"></h3>
+        <p class="for" id="d-for"></p>
+        <p class="blurb" id="d-blurb"></p>
+        <p class="penulis">Penulis: Dr. Syafiq Riza Basalamah, M.A.</p>
+        <div class="buy"><a class="btn btn-ink" data-link="website" href="#kontak" hidden>Pesan melalui website resmi</a></div>
+      </div>
+      <dl class="specs">
+        <dt>Terbit</dt><dd id="d-when"></dd>
+        <dt>Kategori</dt><dd id="d-kat"></dd>
+        <dt>Halaman</dt><dd id="d-hal"></dd>
+        <dt>Ukuran</dt><dd id="d-uk"></dd>
+        <dt>Sampul</dt><dd id="d-sam"></dd>
+        <dt>Harga</dt><dd id="d-harga"></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="proses" id="proses">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Dari kajian menjadi tulisan yang nyaman dibaca.</h2>
+        <p class="section-lead">Naskah kami dapat bermula dari rekaman kajian, lalu melewati tangan tim redaksi dan pemeriksaan syar’i sebelum sampai ke pembaca.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="var(--nila)"/><circle cx="16" cy="16" r="5" fill="var(--cahaya)"/></svg>
+          <h3>Kajian menjadi bahan naskah</h3>
+          <p>Materi dari rekaman kajian Dr. Syafiq Riza Basalamah, M.A. ditransformasikan menjadi tulisan.</p>
+        </li>
+        <li>
+          <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="var(--nila)"/><circle cx="16" cy="16" r="5" fill="var(--cahaya)"/></svg>
+          <h3>Tim redaksi mengolah</h3>
+          <p>Bahasa lisan dirapikan menjadi bacaan yang runtut dan nyaman, tanpa mengubah maksud penulis.</p>
+        </li>
+        <li>
+          <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="var(--nila)"/><circle cx="16" cy="16" r="5" fill="var(--cahaya)"/></svg>
+          <h3>Penulis menambahkan tulisan</h3>
+          <p>Penulis dapat menulis langsung bagian tambahan untuk melengkapi pembahasan.</p>
+        </li>
+        <li>
+          <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="var(--nila)"/><circle cx="16" cy="16" r="5" fill="var(--cahaya)"/></svg>
+          <h3>Pengecekan syar’i</h3>
+          <p>Dr. Syafiq Riza Basalamah, M.A. dan tim redaksi memeriksa isi karya beliau.</p>
+        </li>
+        <li>
+          <svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="var(--nila)"/><circle cx="16" cy="16" r="5" fill="var(--cahaya)"/></svg>
+          <h3>Terbit dengan fisik yang terjaga</h3>
+          <p>Desain modern dan material yang nyaman namun tetap premium, supaya enak dibaca lama dan layak dijadikan hadiah.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="prinsip">
+  <div class="wrap">
+    <h2>Lima hal yang tidak kami tukar demi penjualan.</h2>
+    <p class="section-lead">Penjualan penting agar penerbitan bisa terus berjalan. Namun kelimanya ini tetap kami jaga lebih dulu.</p>
+    <div class="five">
+      <div><h3>Kualitas isi</h3><p>Standar isi, penulisan, dan pembahasan dijaga dari naskah hingga terbit.</p></div>
+      <div><h3>Prinsip syar’i</h3><p>Setiap karya berlandaskan Al-Qur’an dan As-Sunnah.</p></div>
+      <div><h3>Kualitas fisik</h3><p>Buku dirancang agar nyaman dipegang dan dibaca dalam waktu lama.</p></div>
+      <div><h3>Kredibilitas penulis</h3><p>Kami mengutamakan penulis yang kredibel di bidang ilmunya.</p></div>
+      <div><h3>Kejujuran promosi</h3><p>Promo boleh menarik, tetapi tidak boleh menyesatkan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="kemitraan" id="kemitraan">
+  <div class="wrap">
+    <h2>Tiga jalan untuk memiliki dan menyebarkan buku kami.</h2>
+    <p class="section-lead">Semua buku kami resmi dan autentik, baik untuk dibaca sendiri, dijual kembali, maupun disediakan di kajian.</p>
+    <div class="three">
+      <article class="card">
+        <h3>Pembaca</h3>
+        <p>Pesan langsung melalui website resmi atau Shopee. Pertanyaan seputar pesanan kami layani dengan ramah lewat WhatsApp.</p>
+        <a class="btn btn-ink" data-link="wa" data-wa-text="Assalamu’alaikum, saya ingin memesan buku Locre Publishing." href="#kontak" hidden>Tanya atau pesan</a>
+      </article>
+      <article class="card">
+        <h3>Reseller</h3>
+        <p>Untuk individu, toko buku Islam, dan agen yang ingin menjual buku resmi karya Dr. Syafiq Riza Basalamah, M.A. Tersedia skema harga khusus reseller.</p>
+        <a class="btn btn-ink" data-link="wa" data-wa-text="Assalamu’alaikum, saya tertarik menjadi reseller buku Locre Publishing." href="#kontak" hidden>Tanya program reseller</a>
+      </article>
+      <article class="card">
+        <h3>Panitia kajian</h3>
+        <p>Menyelenggarakan kajian atau Safari Dakwah? Kami menyediakan skema konsinyasi, dengan tenggat pengembalian buku yang tidak terjual dan fee sesuai akad.</p>
+        <a class="btn btn-ink" data-link="wa" data-wa-text="Assalamu’alaikum, saya panitia kajian dan ingin bertanya tentang konsinyasi buku Locre Publishing." href="#kontak" hidden>Tanya konsinyasi</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="yayasan">
+  <div class="wrap">
+    <div class="grid">
+      <h2>Laba yang kembali menjadi dakwah.</h2>
+      <div class="body">
+        <p>Lorong Creative Publishing berada di bawah Yayasan Lorong Faradisa. Harga buku kami tetapkan untuk menjaga margin yang sehat, supaya bisnis penerbitan bisa terus berjalan dan labanya dapat mendukung kegiatan dakwah unit lain di bawah yayasan.</p>
+        <p>Karena itu, setiap buku yang sampai ke tangan pembaca ikut menjaga keberlanjutan dakwah melalui tulisan.</p>
+      </div>
+    </div>
+    <div class="nilai">
+      <h3>Nilai yang kami pegang</h3>
+      <ul>
+        <li>Amanah</li><li>Dakwah</li><li>Ilmu</li><li>Integritas</li><li>Kualitas</li><li>Otentisitas</li><li>Kemudahan</li><li>Kebermanfaatan</li><li>Pelayanan</li><li>Keterjangkauan</li><li>Keberlanjutan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="kontak" id="kontak">
+  <div class="wrap">
+    <h2>Temukan faidah yang menemani perjalananmu.</h2>
+    <p class="section-lead">Mulai dari satu buku, atau bangun kemitraan jangka panjang bersama kami.</p>
+    <div class="links">
+      <a class="btn btn-gold" data-link="website" href="#kontak" hidden>Pesan melalui website resmi</a>
+      <a class="btn btn-line" data-link="shopee" href="#kontak" hidden>Belanja di Shopee</a>
+      <a class="btn btn-line" data-link="wa" data-wa-text="Assalamu’alaikum, saya ingin bertanya tentang Locre Publishing." href="#kontak" hidden>Chat WhatsApp</a>
+      <a class="btn btn-line" data-link="instagram" href="#kontak" hidden target="_blank" rel="noopener">Instagram @locrepublishing</a>
+    </div>
+    <div class="legal">
+      <span>© <span id="tahun">2026</span> Lorong Creative Publishing. Bagian dari Yayasan Lorong Faradisa.</span>
+      <span>Menebar Faidah Melalui Tulisan.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ ISI BAGIAN INI ============
+   Kosongkan sebuah nilai jika belum ada: tombolnya otomatis disembunyikan.
+   whatsapp: nomor format internasional tanpa + atau spasi, contoh "6281234567890" */
+const CONFIG = {
+  website:   "",
+  whatsapp:  "",
+  shopee:    "",
+  instagram: "https://www.instagram.com/locrepublishing/"
+};
+/* ======================================== */
+
+const BOOKS = [{"id": "atmd", "title": "Andai Tidak Menikah Dengannya", "short": "ATMD", "when": "November 2024", "target": "Suami dan calon suami", "kategori": "Keluarga, Pernikahan, Suami", "halaman": 202, "ukuran": "13 × 20 cm", "sampul": "Soft cover", "harga": 140000, "blurb": "Pernikahan adalah perjanjian besar dan tanggung jawab yang berat. Buku ini mengajak suami dan calon suami memahami tabiat istrinya, agar rumah tangga menjadi tempat yang menenangkan baginya."}, {"id": "msisk", "title": "Memandang Setengah Isi Setengah Kosong", "short": "MSISK", "when": "Juni 2025", "target": "Pembaca umum", "kategori": "Motivasi, Kehidupan", "halaman": 264, "ukuran": "13 × 20 cm", "sampul": "Soft cover", "harga": 150000, "blurb": "Hidup adalah cerminan dari cara kita memandangnya. Buku ini mengajak pembaca belajar optimis, bersyukur, dan berprasangka baik kepada takdir Allah saat diuji, dari urusan keuangan dan hubungan sampai masa depan yang belum pasti."}, {"id": "amd", "title": "Andai Menikah Dengannya", "short": "AMD", "when": "Februari 2026", "target": "Istri dan calon istri", "kategori": "Keluarga, Pernikahan, Istri", "halaman": 335, "ukuran": "13 × 20 cm", "sampul": "Soft cover", "harga": 150000, "blurb": "Pernikahan tidak berjalan baik hanya dengan cinta. Buku ini membahas cara seorang istri mengenali suaminya: cara berpikir, merespons masalah, mengungkapkan cinta, dan memikul tanggung jawab, supaya setiap langkah diambil dengan ilmu."}, {"id": "ddt", "title": "Doa-Doa Terindah", "short": "DDT", "when": "April 2026", "target": "Pembaca umum", "kategori": "Doa, Ibadah", "halaman": 352, "ukuran": "10 × 17 cm", "sampul": "Hard cover", "harga": 75000, "blurb": "Lafadz doa dipenggal menjadi bagian-bagian pendek agar bisa dipahami dan direnungkan kata demi kata. Berisi doa pilihan dari Al-Qur’an dan As-Sunnah, disusun tematik, lengkap dengan pengantar singkat dan kisah di baliknya."}, {"id": "nak", "title": "Nakhoda Anak Kita", "short": "NAK", "when": "September 2026", "target": "Orang tua, ibu dan ayah", "kategori": "Parenting, Pengasuhan", "halaman": 247, "ukuran": "13 × 20 cm", "sampul": "Soft cover", "harga": 125000, "blurb": "Menjadi orang tua berarti menerima amanah yang akan dipertanggungjawabkan di hadapan Allah <span lang=\"ar\">ﷻ</span>. Buku ini menemani ayah dan ibu di setiap fase pengasuhan, dari doa sebelum anak hadir sampai saatnya melepas mereka berlayar."}];
+const rupiah = n => "Rp" + n.toLocaleString("id-ID");
+
+const detail = document.getElementById("detail");
+const el = id => document.getElementById(id);
+const covers = document.querySelectorAll(".cover");
+
+function tampil(id){
+  const b = BOOKS.find(x => x.id === id);
+  if(!b) return;
+  el("d-title").textContent = b.title;
+  el("d-for").textContent = "Untuk " + b.target.charAt(0).toLowerCase() + b.target.slice(1);
+  el("d-blurb").innerHTML = b.blurb;
+  el("d-when").textContent = b.when;
+  el("d-kat").textContent = b.kategori;
+  el("d-hal").textContent = b.halaman + " halaman";
+  el("d-uk").textContent = b.ukuran;
+  el("d-sam").textContent = b.sampul;
+  el("d-harga").textContent = rupiah(b.harga);
+}
+
+covers.forEach(c => c.addEventListener("click", () => {
+  if(c.getAttribute("aria-pressed") === "true") return;
+  covers.forEach(x => x.setAttribute("aria-pressed", String(x === c)));
+  detail.classList.add("ganti");
+  setTimeout(() => { tampil(c.dataset.id); detail.classList.remove("ganti"); }, 160);
+}));
+tampil("nak");
+
+document.querySelectorAll("[data-link]").forEach(a => {
+  const key = a.dataset.link;
+  let url = "";
+  if(key === "wa" && CONFIG.whatsapp){
+    url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(a.dataset.waText || "");
+  } else if(key !== "wa" && CONFIG[key]){
+    url = CONFIG[key];
+  }
+  if(url){ a.href = url; a.hidden = false; if(key !== "website"){ a.target = "_blank"; a.rel = "noopener"; } }
+});
+el("tahun").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
